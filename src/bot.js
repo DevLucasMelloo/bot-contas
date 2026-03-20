@@ -9,7 +9,7 @@ const client = new Client({
         dataPath: './sessions'
     }),
     puppeteer: {
-        executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
         headless: true
     }
 });
