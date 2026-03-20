@@ -15,8 +15,8 @@ function getMesAtual() {
 async function lerEmails() {
     const connection = await imaps.connect({
         imap: {
-            user: config.email.user,
-            password: config.email.password,
+            user: process.env.EMAIL_USER,
+            password: process.env.EMAIL_PASS,
             host: 'imap.gmail.com',
             port: 993,
             tls: true,
